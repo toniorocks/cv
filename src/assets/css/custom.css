@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+}
+
+.verde{
+    color: green;
+}
+
+.verde-chillon{
+    color: greenyellow;
+}
+
+.fondo-verde-chillon{
+    background-color: greenyellow;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: black;
+    border: 1px solid greenyellow;
+}
+
+.gris{
+    color: gray;
+}
+
+.form-control{
+    background-color: #333;
+}
+
+.breadcrumb{
+    background-color: #000;
+}
+
+.breadcrumb-item{
+    color: green !important;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.breadcrumb-item a{
+    color: green;
+}
+
+.modal-content{
+
+    background-color:black;
+    color:white;
+    border-radius: 0;
+}
+
+.modal-title{
+    color: yellowgreen;
+}
+
+button.close{
+    color: yellowgreen;
+    opacity: 1;
+    text-shadow: none;
+    transition: 1s;
+}
+
+button.close:hover{
+    color: green;
+}
+
+.modal-body{
+
+    background-color: #333;
+
+}
+
+.modal-header, .modal-footer{
+
+    border: 0;
+
+}
+

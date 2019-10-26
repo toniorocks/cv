@@ -1,0 +1,12 @@
+section.blog{
+    
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.blog-entry{
+
+    margin-bottom: 20px;
+
+}

@@ -1,0 +1,49 @@
+section.home p{
+    text-align: justify !important;
+}
+
+section.home{
+    
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h3{
+    font-weight: 100;
+}
+
+.consultoria-item{
+    background-color: black;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 1px;
+    width: 32%;
+}
+
+.consultoria{
+    margin-top: 30px !important;
+}
+
+.costo{
+    font-family: 'Staatliches', cursive;
+    color: greenyellow;
+    font-size: 30px;
+}
+.costo small{
+    font-size: 12px;
+    font-weight: 100;
+    color: white;
+}
+
+ul.planes{
+    list-style: none;
+    padding: 0 !important;
+
+}
+
+ul.planes li{
+    text-align: center;
+}
+
+
