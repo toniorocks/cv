@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  numero_paquete:number;
+
+  constructor() { 
+    this.numero_paquete = 0;
+  }
 
   ngOnInit() {
   }
+
+  paqueteUno(){ this.numero_paquete = 1; }
+  paqueteDos(){ this.numero_paquete = 2; }
+  paqueteTres(){ this.numero_paquete = 3; }
 
 }

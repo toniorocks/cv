@@ -1,1 +1,132 @@
-<p>bootstrap-modal works!</p>
+<!-- Modal -->
+<div class="modal fade" id="marqModal" tabindex="-1" role="dialog" aria-labelledby="marqModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icofont-close-squared-alt"></i>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">Consultorías</h5>
+
+            </div>
+            <div class="modal-body">
+                
+                <div *ngIf="paquete == 1">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Básica</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <ul class="list-group">
+                                <li class="list-group-item fondo-verde-chillon">PHP</li>
+                                <li class="list-group-item fondo-verde-chillon">Javascript</li>
+                                <li class="list-group-item fondo-verde-chillon">HTML</li>
+                                <li class="list-group-item fondo-verde-chillon">CSS</li>
+                                <li class="list-group-item fondo-verde-chillon">MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-10">
+
+                            <div class="jumbotron">
+                                <h1 class="display-4">$399 <small>Por hora</small></h1>
+                                <p class="lead">Asesoría y/o construcción de páginas web básicas y tiendas en linea con las tecnologías listadas</p>
+                                <hr class="my-4">
+                                <p>Por cada 5 horas contratadas se brinda un mes de soporte telefónico en horario de oficina de Lunes a Viernes de las 9 a las 18 horas.</p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-lg fondo-verde-chillon" href="https://paypal.me/IzaguirreSierra?locale.x=es_XC" target="_blank" role="button">Contratar</a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                            
+                </div>
+
+                <div *ngIf="paquete == 2">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Corporativa</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <ul class="list-group">
+                                <li class="list-group-item fondo-verde-chillon">Angular</li>
+                                <li class="list-group-item fondo-verde-chillon">Aplicaciones móviles (Android y IOS)</li>
+                                <li class="list-group-item fondo-verde-chillon">Accesibilidad Web</li>
+                                <li class="list-group-item fondo-verde-chillon">API Rest</li>
+                                <li class="list-group-item fondo-verde-chillon">PHP Frameworks</li>
+                                <li class="list-group-item fondo-verde-chillon">Javascript</li>
+                                <li class="list-group-item fondo-verde-chillon">HTML</li>
+                                <li class="list-group-item fondo-verde-chillon">CSS</li>
+                                <li class="list-group-item fondo-verde-chillon">MySQL</li>
+                                <li class="list-group-item fondo-verde-chillon">MSSql</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-10">
+                    
+                            <div class="jumbotron">
+                                <h1 class="display-4">$699 <small>Por hora</small></h1>
+                                <p class="lead">Asesoría y/o construcción de portales web, webapps y aplicaciones móviles</p>
+                                <hr class="my-4">
+                                <p>Por cada 3 horas contratadas se brinda una quincena de soporte telefónico en horario de oficina de Lunes a
+                                    Viernes de las 9 a las 18 horas.</p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-lg fondo-verde-chillon"
+                                        href="https://paypal.me/IzaguirreSierra?locale.x=es_XC" target="_blank" role="button">Contratar</a>
+                                </p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="paquete == 3">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Empresarial</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <ul class="list-group">
+                                <li class="list-group-item fondo-verde-chillon">Liderazgo de Proyectos de Software</li>
+                                <li class="list-group-item fondo-verde-chillon">Java</li>
+                                <li class="list-group-item fondo-verde-chillon">.NET</li>
+                                <li class="list-group-item fondo-verde-chillon">Angular</li>
+                                <li class="list-group-item fondo-verde-chillon">Aplicaciones móviles (Android y IOS)</li>
+                                <li class="list-group-item fondo-verde-chillon">Accesibilidad Web</li>
+                                <li class="list-group-item fondo-verde-chillon">API Rest</li>
+                                <li class="list-group-item fondo-verde-chillon">PHP Frameworks</li>
+                                <li class="list-group-item fondo-verde-chillon">Javascript</li>
+                                <li class="list-group-item fondo-verde-chillon">HTML</li>
+                                <li class="list-group-item fondo-verde-chillon">CSS</li>
+                                <li class="list-group-item fondo-verde-chillon">MySQL</li>
+                                <li class="list-group-item fondo-verde-chillon">MSSql</li>
+                                <li class="list-group-item fondo-verde-chillon">OracleSQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-10">
+                    
+                            <div class="jumbotron">
+                                <h1 class="display-4">$999 <small>Por hora</small></h1>
+                                <p class="lead">Asesoría, planeación y/o construcción de proyectos de software de TI</p>
+                                <hr class="my-4">
+                                <p>Por cada 3 horas contratadas se brinda un mes de soporte telefónico en horario de oficina de Lunes a
+                                    Viernes de las 9 a las 18 horas.</p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-lg fondo-verde-chillon"
+                                        href="https://paypal.me/IzaguirreSierra?locale.x=es_XC" target="_blank" role="button">Contratar</a>
+                                </p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

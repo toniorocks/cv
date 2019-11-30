@@ -59,7 +59,7 @@
                 <li>Optimización</li>
                 <li>Soporte L a V, 9 a 18 hrs</li>
             </ul>
-            <button class="btn btn-danger fondo-verde-chillon">Seleccionar</button>
+            <button (click)="paqueteUno()" class="btn btn-danger fondo-verde-chillon" data-toggle="modal" data-target="#marqModal">Seleccionar</button>
         </div>
         <div class="consultoria-item col-sm-4">
             <h3>Corporativa</h3>
@@ -70,7 +70,7 @@
                 <li>Optimización</li>
                 <li>Soporte L a V, 9 a 18 hrs</li>
             </ul>
-            <button class="btn btn-danger fondo-verde-chillon">Seleccionar</button>
+            <button (click)="paqueteDos()" class="btn btn-danger fondo-verde-chillon" data-toggle="modal" data-target="#marqModal">Seleccionar</button>
         </div>
         <div class="consultoria-item col-sm-4">
             <h3>Empresarial</h3>
@@ -81,7 +81,9 @@
                 <li>Optimización</li>
                 <li>Soporte L a V, 9 a 18 hrs</li>
             </ul>
-            <button class="btn btn-danger fondo-verde-chillon">Seleccionar</button>
+            <button class="btn btn-danger fondo-verde-chillon" (click)="paqueteTres()" data-toggle="modal" data-target="#marqModal">Seleccionar</button>
         </div>
     </div>
 </section>
+
+<app-bootstrap-modal [paquete]="numero_paquete"></app-bootstrap-modal>

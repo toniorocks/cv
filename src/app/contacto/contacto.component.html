@@ -1,25 +1,31 @@
 <h2>Contacto</h2>
 <hr>
 <p>No dudes en consultarme por este medio,los campos marcados con asterisco(*) son obligatorios</p>
-<div class="row">
 
-    <div class="col-sm-12">
-        <label for="email">Email *</label>
-        <input type="email" name="email" class="form-control" placeholder="@email">
+<form #contactoForm="ngForm" (ngSubmit)="onSubmit(contactoForm)">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <label for="email">Email *</label>
+            <input id="email" [(ngModel)]="contacto.email" type="email" name="email" class="form-control" placeholder="@email" required minlength="1" maxlength="100">
+            <span class="error" *ngIf="contactoForm.submitted && contactoForm.controls['email'].errors">{{email_error}}</span>
+        </div>
+
+    </div> 
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <label for="cuerpo">Mensaje</label>
+            <textarea class="form-control" rows="5" name="cuerpo"></textarea>
+        </div>
+
     </div>
 
-</div> 
-<div class="row" style="margin-top: 20px;">
-    <div class="col-sm-12">
-        <label for="cuerpo">Mensaje</label>
-        <textarea class="form-control" rows="5" name="cuerpo"></textarea>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-8">&nbsp;</div>
+        <div class="col-sm-4">
+            <button class="btn btn-block btn-danger fondo-verde-chillon">Enviar</button>
+        </div>
     </div>
 
-</div>
-
-<div class="row" style="margin-top: 20px;">
-    <div class="col-sm-8">&nbsp;</div>
-    <div class="col-sm-4">
-        <button class="btn btn-block btn-danger fondo-verde-chillon">Enviar</button>
-    </div>
-</div>
+</form>
