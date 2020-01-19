@@ -8,15 +8,16 @@
 
         <div class="col-sm-12">
             <label for="email">Email *</label>
-            <input id="email" [(ngModel)]="contacto.email" type="email" name="email" class="form-control" placeholder="@email" required minlength="1" maxlength="100">
+            <input id="email" [(ngModel)]="contacto.email" type="text" name="email" class="form-control" placeholder="email@email.com" required minlength="1" maxlength="100">
             <span class="error" *ngIf="contactoForm.submitted && contactoForm.controls['email'].errors">{{email_error}}</span>
         </div>
 
-    </div> 
+    </div>
     <div class="row" style="margin-top: 20px;">
         <div class="col-sm-12">
             <label for="cuerpo">Mensaje</label>
-            <textarea class="form-control" rows="5" name="cuerpo"></textarea>
+            <textarea [(ngModel)]="contacto.mensaje" class="form-control" rows="5" name="mensaje" id="mensaje" placeholder="Mensaje" minlength="5" maxlength="400" required></textarea>
+            <span class="error" *ngIf="contactoForm.submitted && contactoForm.controls['mensaje'].errors">Al menos 10 caracteres</span>
         </div>
 
     </div>
