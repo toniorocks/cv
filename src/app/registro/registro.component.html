@@ -1,0 +1,46 @@
+<div class="registro">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="row">
+            <div class="col-12">
+                <h1>Registro</h1>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" class="form-control" required minlength="5" maxlength="50">
+                <div *ngIf="(nombre.touched || form.submitted) && (usuario.nombre == undefined || !nombre.valid)" class="alert alert-danger">
+                    <strong>No válido </strong>
+                    <small>Al menos 5 letras, el campo es requerido</small>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" #email="ngModel" [(ngModel)]="usuario.email" class="form-control" required minlength="5" maxlength="75" email>
+                <div *ngIf="(email.touched || form.submitted) && (usuario.email == undefined || !email.valid)" class="alert alert-danger">
+                    <strong>No válido </strong>
+                    <small>Al menos 5 letras, el campo es requerido, debe tener formato de email</small>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" #password="ngModel" [(ngModel)]="usuario.password" class="form-control" minlength="6" maxlength="20" required>
+                <div *ngIf="(password.touched || form.submitted) && (usuario.password == undefined || !password.valid)" class="alert alert-danger">
+                    <strong>No válido </strong>
+                    <small>Al menos 6 letras, el campo es requerido, debe coincidir con la confirmación</small>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="confirma">Confirma Password</label>
+                <input type="password" name="confirma" id="confirma" #confirma="ngModel" [(ngModel)]="confirma_" class="form-control" minlength="6" maxlength="20" required>
+                <div *ngIf="(confirma.touched || form.submitted) && (!confirma.valid)" class="alert alert-danger">
+                    <strong>No válido </strong>
+                    <small>Al menos 6 letras, el campo es requerido, debe coincidir con la contraseña</small>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6">
+                <button type="submit" class="btn btn-block fondo-verde-chillon"><i class="icofont-save"></i> Guardar</button>
+            </div>
+            <div class="col-6 col-sm-6">
+                <button class="btn btn-block fondo-verde-chillon" [routerLink]="['/acceso']"><i
+                        class="icofont-login"></i> Ir al Acceso</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Contacto } from '../modelos/contacto';
 import { NgForm } from '@angular/forms';
 
+import { EmailService } from '@app/servicios/email.service';
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -13,8 +15,10 @@ export class ContactoComponent implements OnInit {
   email_error: string;
   mensaje_error : string;
 
-  constructor() {
+  constructor(private _emailService:EmailService) {
     this.contacto = new Contacto();
+    this.contacto.email = 'marco@marco.com';
+    this.contacto.mensaje = 'DE PRUEBA EN FIJO';
   }
 
   ngOnInit() {
@@ -41,7 +45,14 @@ export class ContactoComponent implements OnInit {
 
     if(!error){
 
-      console.log("Se enviará el formulario")
+      console.log("Se enviará el formulario");
+      this._emailService.sendMessage(this.contacto).subscribe((resp:any)=>{
+        console.log(resp);
+      });
+
+    }else{
+
+      console.log('Error en el formulario');
 
     }
 

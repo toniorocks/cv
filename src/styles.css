@@ -2,3 +2,18 @@
 .error{
     color: red;
 }
+
+.alert{
+    padding: 0 0 0 1em;
+    margin: .5em 0 .5em 0;
+}
+
+.alert-danger{
+    background-color: black;
+    color: red;
+    border: 1px solid black ;
+}
+
+input{
+    color: white !important;
+}

@@ -10,6 +10,9 @@ import { BlogComponent } from './blog/blog.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -20,12 +23,15 @@ import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.compo
     BlogComponent,
     PortfolioComponent,
     SkillsComponent,
-    BootstrapModalComponent
+    BootstrapModalComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
   ],
