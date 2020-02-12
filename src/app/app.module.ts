@@ -1,37 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { BlogComponent } from './blog/blog.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { SkillsComponent } from './skills/skills.component';
-import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
-import { RegistroComponent } from './registro/registro.component';
+
+import { PublicCvModule } from '@app/public-cv/public-cv.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    ContactoComponent,
-    BlogComponent,
-    PortfolioComponent,
-    SkillsComponent,
-    BootstrapModalComponent,
-    LoginComponent,
-    RegistroComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PublicCvModule
   ],
   providers: [
   ],

@@ -1,0 +1,99 @@
+.container{
+    margin-top: 5em;
+    background-color: #333;
+    color: white;
+    min-height: 10em;
+    padding: 0;
+}
+
+.nav{
+    width: 75px;
+    height: 45em;
+    
+}
+
+.nav-list{
+
+    list-style-type: none !important;
+    padding: 0;
+
+}
+
+.nav-list li{
+
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 1em 0;
+    margin: 2px 0;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.nav-list li:hover{
+
+    background-color: #111;
+
+}
+
+.btn-hamburguesa{
+    border: 0;
+    background-color: #D7DF23;
+    color: black;
+    width: 100%;
+    height: 3em;
+    font-size: 20px;
+}
+
+.btn-descarga{
+    border: 0;
+    background-color: #333;
+    width: 100%;
+    height: 3em;
+    font-size: 20px;
+    position: relative;
+    vertical-align: bottom;
+    transition: 1s;
+}
+
+.btn-descarga:hover{
+    background-color: green;
+}
+
+.main-picture{
+    background-color: green;
+    background: url('../../assets/images/main-pic.jpg');
+    background-repeat: none;
+    background-size: 100%;
+    margin-top: 4em;
+    height: 300px !important;
+}
+
+span.subtitulo{
+    color: greenyellow;
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.main-section{
+    padding: 50px 20px;
+}
+
+.btn-red-social{
+    color: white !important;
+}
+
+hr.left-col{
+    color: #333;
+    background-color: #333;
+    border: 1px solid green;
+    margin-bottom: 5px;
+}
+
+a{
+    color: white;
+}
+

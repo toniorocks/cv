@@ -3,6 +3,7 @@ import { Usuario } from '@app/modelos/usuario.model';
 import { UsuarioService } from '@app/servicios/usuario.service';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2'
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-registro',
@@ -14,7 +15,7 @@ export class RegistroComponent implements OnInit {
   usuario: Usuario;
   confirma_: string;
 
-  constructor(private _usuarioService: UsuarioService) {
+  constructor(private _usuarioService: UsuarioService, private router: Router) {
     this.usuario = new Usuario;
     this.confirma_ = '';
   }
@@ -73,11 +74,38 @@ export class RegistroComponent implements OnInit {
       });
 
     }else{
-
-      console.log(error);
-
+      this._usuarioService.nuevoUsuario(this.usuario).subscribe((resp:any)=>{
+        if(resp.ok == true){
+          Swal.fire({
+            title: "¡Buen trabajo!",
+            text: "Datos guardados, por favor intente loguearse",
+            icon: "success"
+          }).then((value) => {
+            this.router.navigate(['/acceso']);
+          });
+        }else{
+         this.errorDesconocido();
+        }
+      },((error:any) => {
+        if(error.ok == false){
+          Swal.fire({
+            title:'Error',
+            text: "No se pudo guardar el usuario, es probable que el email ya se haya registrado, intente con otro",
+            icon:'warning'
+          }); 
+        }else{
+          this.errorDesconocido();
+        }
+      }));
     }
+  }
 
+  errorDesconocido(){
+    Swal.fire({
+      title:'Error',
+      text: "Error desconocido, intente más tarde",
+      icon:'error'
+    }); 
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contacto } from '../modelos/contacto';
+import { Contacto } from '@app/modelos/contacto';
 import { NgForm } from '@angular/forms';
 
 import { EmailService } from '@app/servicios/email.service';

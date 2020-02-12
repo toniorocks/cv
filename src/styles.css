@@ -17,3 +17,72 @@
 input{
     color: white !important;
 }
+
+.jumbotron{
+    background-color: black;
+}
+
+.jumbotron h1{
+    color: #D7DF23;
+}
+
+.btn{
+    margin: .25em;
+}
+
+.btn-primary{
+    color: #000;
+    background-color: #D7DF23;
+    border-color: #D7DF23;
+}
+
+.btn-primary:hover{
+    color: #fff;
+    background-color: #D7DF23;
+    border-color: #D7DF23;
+}
+
+.btn-secondary{
+    color:#fff;
+    background-color: #8DC63F;
+    border-color: #8DC63F;
+}
+
+.btn-dark{
+    color: #D7DF23;
+    background-color: #414042;
+    border-color: #414042;
+}
+
+.btn-light{
+    color: #8DC63F;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-danger{
+    color: #fff;
+    background-color: #D60000;
+    border-color: #D60000;
+}
+
+/* Color Theme Swatches in Hex */
+.GreenYellow-1-hex { color: #414042; }
+.GreenYellow-2-hex { color: #006838; }
+.GreenYellow-3-hex { color: #39B54A; }
+.GreenYellow-4-hex { color: #8DC63F; }
+.GreenYellow-5-hex { color: #D7DF23; }
+
+/* Color Theme Swatches in RGBA */
+.GreenYellow-1-rgba { color: rgba(65, 63, 66, 1); }
+.GreenYellow-2-rgba { color: rgba(0, 103, 56, 1); }
+.GreenYellow-3-rgba { color: rgba(56, 181, 73, 1); }
+.GreenYellow-4-rgba { color: rgba(140, 198, 63, 1); }
+.GreenYellow-5-rgba { color: rgba(214, 223, 35, 1); }
+
+/* Color Theme Swatches in HSLA */
+.GreenYellow-1-hsla { color: hsla(270, 1, 25, 1); }
+.GreenYellow-2-hsla { color: hsla(152, 100, 20, 1); }
+.GreenYellow-3-hsla { color: hsla(128, 52, 46, 1); }
+.GreenYellow-4-hsla { color: hsla(85, 54, 51, 1); }
+.GreenYellow-5-hsla { color: hsla(62, 74, 50, 1); }

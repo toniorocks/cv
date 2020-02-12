@@ -3,10 +3,18 @@
     <h1 class="h3 mb-3 font-weight-normal">Acceso</h1>
     <label for="inputEmail" class="sr-only">Email</label>
     <input type="email" id="email" name="email" [(ngModel)]="acceso.email" #email="ngModel" class="form-control" placeholder="Email" required autofocus>
+    <div *ngIf="(email.touched || form.submitted) && (acceso.email == undefined || !email.valid)" class="alert alert-danger">
+        <strong>No válido </strong>
+        <small>Al menos 5 letras, el campo es requerido, debe tener formato de email</small>
+    </div>
     
     <br>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="acceso.password" class="form-control" placeholder="Password" required>
+    <div *ngIf="(password.touched || form.submitted) && (acceso.password == undefined || !password.valid)" class="alert alert-danger">
+        <strong>No válido </strong>
+        <small>Al menos 6 letras, el campo es requerido</small>
+    </div>
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" value="remember-me"> Recordarme
