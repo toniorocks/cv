@@ -10,8 +10,6 @@ import { RegistroComponent } from '@app/public-cv/registro/registro.component';
 import { ExitoComponent } from '@app/public-cv/exito/exito.component';
 import { PublicCvComponent } from '@app/public-cv/public-cv.component';
 
-
-
 const routes: Routes = [
   {
     path: '', component: PublicCvComponent, children: [
@@ -25,10 +23,7 @@ const routes: Routes = [
       { path: 'exito', component: ExitoComponent }
     ]
   },
-
-
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

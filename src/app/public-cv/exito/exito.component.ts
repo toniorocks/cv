@@ -17,7 +17,7 @@ export class ExitoComponent implements OnInit {
     private _usuarioService:UsuarioService,
     private router:Router) { 
     let resp:any = this._usuarioService.getUsuario();
-    this.usuario = resp.usuario;
+    this.usuario = resp;
     if(this.usuario){
       this.nombre = this.usuario.nombre;
     }else{
