@@ -1,0 +1,23 @@
+<p>Nueva publicación</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/admin']">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/admin/publicaciones']">Publicaciones</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nueva publicación</li>
+    </ol>
+</nav>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="publicacionForm">
+            <div class="row">
+                <div class="col-sm-8">
+                    <label for="titulo">Título*</label>
+                    <input type="text" class="form-control" name="titulo" id="titulo" formControlName="titulo">
+                    <label for="cuerpo">Cuerpo*</label>
+                    <angular-editor formControlName="cuerpo" [config]="editorConfig"></angular-editor>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </form>
+    </div>
+</div>

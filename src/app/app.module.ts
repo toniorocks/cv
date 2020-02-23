@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { PublicCvModule } from '@app/public-cv/public-cv.module';
-
+import { AdminModule } from '@app/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { PublicCvModule } from '@app/public-cv/public-cv.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    PublicCvModule
+    PublicCvModule,
+    AdminModule
   ],
   providers: [
   ],

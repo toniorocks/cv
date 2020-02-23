@@ -1,0 +1,50 @@
+<p>Índice de publicaciones</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/admin']">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/admin/publicaciones']">Publicaciones</a></li>
+        <!--<li class="breadcrumb-item active" aria-current="page">Data</li>-->
+    </ol>
+</nav>
+<div class="row">
+    <div class="col-sm-2">
+        <button class="btn btn-info btn-block btn-sm" [routerLink]="['nuevo']"><i class="icofont-plus"></i> Añadir publicación</button>
+    </div>
+    <div class="col-sm-6">
+       &nbsp;
+    </div>
+    <div class="col-sm-4">
+        <input class="form-control" placeholder="Buscar en publicaciones">
+    </div>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Publicado</th>
+            <th scope="col">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pub of data; let index;">
+            <th scope="row">{{pub._id}}</th>
+            <td>{{pub.titulo}}</td>
+            <td>{{pub.cuerpo| slice:20}} ... </td>
+            <td>{{pub.fecha | date}}</td>
+            <td>
+                <span *ngIf="pub.publicado == true"><i class="icofont-checked"></i></span>
+                <span *ngIf="pub.publicado == false"><i class="icofont-close-squared-alt"></i></span>
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary"><i class="icofont-eye-alt"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="icofont-edit"></i></button>
+                    <button type="button" class="btn btn-warning"><i class="icofont-delete-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
