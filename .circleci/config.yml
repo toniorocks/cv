@@ -13,7 +13,7 @@ jobs:
           name: install dependencies
           command: |
             npm i
-            npm install -g karma-cli
+            sudo npm install -g karma-cli
       #3 Ejecutar el software de convenciones de codificación más el tester.
       - run:
           name: run tests
