@@ -7,6 +7,8 @@ jobs:
   build:
     docker:
       - image: circleci/node
+    environment:
+      CHROME_BIN: /usr/bin/google-chrome
     working_directory: ~/devops
     steps:
     #1 Obtener el repositorio de GitHub.
