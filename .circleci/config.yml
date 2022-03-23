@@ -17,4 +17,5 @@ jobs:
       - run:
           name: run tests
           command: |
+            CHROME_BIN=/usr/bin/google-chrome karma start --single-run
             npm test
