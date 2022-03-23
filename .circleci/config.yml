@@ -1,13 +1,13 @@
 #Python CircleCI 2.0 configuration file
 version: 2
+executor:
+  name: common/node
+  feature: '-browsers'
 jobs:
   build:
     docker:
       - image: circleci/node
     working_directory: ~/devops
-    executor:
-      name: common/node
-      feature: '-browsers'
     steps:
     #1 Obtener el repositorio de GitHub.
       - checkout
