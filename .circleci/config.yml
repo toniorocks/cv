@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:stable
+      - image: circleci/node
     working_directory: ~/devops
     steps:
     #1 Obtener el repositorio de GitHub.
