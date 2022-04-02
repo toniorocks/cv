@@ -18,10 +18,9 @@ jobs:
           name: install dependencies
           command: |
             npm i
+            nvm use --lts
       #3 Ejecutar el software de convenciones de codificación más el tester.
       - run:
           name: run tests
-          command: |
-            CHROME_BIN=/usr/bin/google-chrome
-            npm u
+          command: |            
             npm run test
