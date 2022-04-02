@@ -17,8 +17,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            npm i
-            nvm use --lts
+            npm i --save-dev @angular-devkit/build-angular
       #3 Ejecutar el software de convenciones de codificación más el tester.
       - run:
           name: run tests
