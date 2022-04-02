@@ -1,7 +1,7 @@
 #Python CircleCI 2.0 configuration file
 version: 2
 executor:
-  name: common/node
+  name: common/node:16
   feature: '-browsers'
 jobs:
   build:
